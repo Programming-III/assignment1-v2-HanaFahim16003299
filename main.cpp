@@ -9,24 +9,19 @@
 using namespace std;
 
 // ==================== Person Class Implementation =========================
- class Person {
-private: 
-string name;
-int id;
 
-public: 
 
 Person:: Person (name, id) {
     this.name = name;
     this.id = id;
 }
-Person () {
+Person:: Person () {
     name = "";
     id = 0;
 }
 ~Person();
 
-display() {
+Person:: display() {
     cout << "Name:" << name << endl;
     cout << "ID" << id << endl;
 }
@@ -40,12 +35,7 @@ display() {
 
 
 // ==================== Student Class Implementation ====================
-class Student {
-    private:
-    int yearLevel;
-    string major;
 
-public:
 Student:: Student (int yearLevel, string major) {
     this. yearLevel = yearLevel;
     this.major = major;
@@ -66,12 +56,7 @@ cout << "major:" << major << endl;
 
 
 // ==================== Instructor Class Implementation ====================
-class Instructor {
-    private: 
-    string department;
-    int experienceYears;
 
-    public: 
     Instructor:: Instructor (string department, int experienceYears) {
         this.department = department;
         this.experienceYears= experienceYears;
@@ -81,14 +66,12 @@ class Instructor {
         experienceYears= 0;
     }
 
-    ~Instructor(){
-        
-    }
+   
 void Instructor:: display() {
     cout<< "Department:" << department<< endl;
     cout<< "Experience Years:" << experienceYears<< endl;
 }
-}
+
 
 
 // ==================== Course Class Implementation ====================
