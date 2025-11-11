@@ -13,6 +13,7 @@ private:
 public:
 Person (name, id);
 Person ();
+~Person();
 void display();
 
 
