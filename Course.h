@@ -17,7 +17,7 @@ private:
      Course (string courseCode, string courseName, int maxStudents, int currentStudents);
      addStudent(const Student&s);
      void displayCourseInfo();
-    
+         ~Course();    
 }
 
 
