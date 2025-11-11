@@ -40,8 +40,6 @@ display() {
 
 
 // ==================== Student Class Implementation ====================
-
-
 class Student {
     private:
     int yearLevel;
@@ -68,10 +66,29 @@ cout << "major:" << major << endl;
 
 
 // ==================== Instructor Class Implementation ====================
+class Instructor {
+    private: 
+    string department;
+    int experienceYears;
 
+    public: 
+    Instructor:: Instructor (string department, int experienceYears) {
+        this.department = department;
+        this.experienceYears= experienceYears;
+    }
+    Instructor::Instructor() {
+        department= "";
+        experienceYears= 0;
+    }
 
-
-
+    ~Instructor(){
+        
+    }
+void Instructor:: display() {
+    cout<< "Department:" << department<< endl;
+    cout<< "Experience Years:" << experienceYears<< endl;
+}
+}
 
 
 // ==================== Course Class Implementation ====================
