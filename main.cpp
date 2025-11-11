@@ -47,11 +47,10 @@ Student:: Student () {
 }
 
 void Student::display() {
+ cout<< "name:" << name;
 cout<< "Year level:" << cout yearlevel << endl;
 cout << "major:" << major << endl;
     }
-
-    
 }
 
 
@@ -69,15 +68,41 @@ cout << "major:" << major << endl;
    
 void Instructor:: display() {
     cout<< "Department:" << department<< endl;
-    cout<< "Experience Years:" << experienceYears<< endl;
+    cout<< "Experience:" << experienceYears<< endl;
 }
 
 
 
 // ==================== Course Class Implementation ====================
 
+    Course:: Course (string courseCode, string courseName, int maxStudents, Student* students, int currentStudents) {
+this.courseCode = courseCode;
+this.courseName = courseName;
+this.maxStudents= maxStudeents;
+Student-> students;
+this.currentStudents= currentStudents;
+    }
+    Course::Course() {
+        courseCode= "";
+        courseName = "";
+        maxStudents= 0;
+        students = 0;
+        currentStudents =0;
+    }
+    ~Course() {
+        delete students;
+    }
 
-
+    Course:: addStudent(const Student&s) {
+        Student* = student++;
+    }
+Person:: displayCourseInfo() {
+cout<< "Course:" << courseCode;
+cout<< courseName << endl;
+cout<< "Max students:" << maxStudents << endl;
+cout<< "Currently Enrolled" << currentStudents << endl;
+}
+}
 
 
 
@@ -85,7 +110,23 @@ void Instructor:: display() {
 
 // ==================== Main Function ====================
 int main() {
-   
+   Course c;
+    c ("CS101", "Introduction to programming", 3, "Omar NabilID(2202));
+    c.displayCourseInfo();
+    cout<< "Instructor Info:" << endl;
+Instructor i;
+    i("Dr.Lina Khaled", "Computer Science");
+    cout<< "Instructor Info:" << endl;
+    i.display();
+    cout<< "Student Info: << endl;
+    Student s;
+    s ( "Omar Nabil", 2, "Informatics");
+
+
+
+
+        
+      
     
     return 0;
 }
